@@ -34,5 +34,9 @@ async def unban_all(ctx: commands.Context, id: Option(str, "Enter the server id 
         await ctx.respond("You need administrator to run this command")
 
 
+@bot.event
+async def on_ready():
+    print(f"Logged in as {bot.user}")
+    
 
 bot.run(discord_token)
